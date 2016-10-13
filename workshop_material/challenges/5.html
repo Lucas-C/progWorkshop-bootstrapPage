@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='fr'>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Challenge 5 - Formulaires</title>
+    <link rel="stylesheet" type="text/css" href="../libs/css/bootstrap-3.3.7.min.css">
+    <link rel="stylesheet" type="text/css" href="../challenges.css">
+    <script type="text/javascript" src="../libs/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../libs/js/bootstrap-3.3.7.min.js"></script>
+  </head>
+  <body>
+    <div class="container" role="main">
+
+      <div class="header clearfix">
+        <h3 class="text-muted">Challenge 5 - Formulaires</h3>
+      </div>
+
+      <div class="jumbotron">
+  	    <img src="../img/cowboy-beebop_ed_fast-driving.gif" class="img-thumbnail center-block">
+      </div>
+
+      <div class="alert alert-info" role="alert">
+        <p>Tu dois résoudre ce challenge uniquement en modifiant le fichier <strong><a href="5.js">5.js</a></strong></p>
+      </div>
+
+      <div class="well">
+        <form role="search" id="formulaireCoffreFort" class="navbar-form" onsubmit="ouvrirLeCoffre(); return false">
+          <h2>Coffre-fort</h2>
+          <p>Pour ouvrir ce coffre, il faut découvrir le bon code !</p>
+          <p>Il s'agit de 3 chiffres et/ou lettres, en minuscules ou majuscules.</p>
+          <p>Combien de possibilités cela fait-il ?</p>
+          <p>Tu vas devoir les essayer toutes, grâce aux <strong>boucles</strong> que tu as découvert dans l'activité précédente !</p>
+          <div class="form-group">
+            <img src="../img/safe.jpg" class="img-thumbnail" style="height: 300px">
+            <label for="motDePasse">Mot de passe</label>
+            <input type="password" size="3" maxlength="3" class="form-control" id="motDePasse" placeholder="mdp">
+          </div>
+          <button type="submit" class="btn btn-default">Ouvrir</button>
+        </form>
+        <div id="resultatCoffreFort"></div>
+      </div>
+
+      <div class="well">
+        <form role="search" id="formulairePlusOuMoins" class="navbar-form" onsubmit="proposerUnNombre(); return false">
+          <h2>Plus ou moins ?</h2>
+          <p>Cette fois, à toi de créer de ton programme de devinette !</p>
+          <p>Choisis ton nombre secret, et définit avec <code>if</code> et <code>else</code> comment doit se comporter ton programme.</p>
+          <p>Tu peux utiliser les fonctions <code>erreur</code> et <code>succes</code> pour afficher des messages dans la page.</p>
+          <div class="form-group">
+            <img src="../img/question-mark.png" class="img-thumbnail" style="height: 200px">
+            <label for="nombreSaisi">Devine mon nombre secret</label>
+            <input type="number" class="form-control" step="1" id="nombreSaisi" placeholder="?">
+          </div>
+          <button type="submit" class="btn btn-default">Proposer</button>
+        </form>
+        <div id="resultatPlusOuMoins"></div>
+      </div>
+
+      <div class="alert alert-info" role="alert">
+        <p>Voici les opérateurs de comparaison de nombres à utiliser dans un <code>if</code> en Javascript:</p>
+        <br>
+        <div class="center-block" style="width: 400px; background: white">
+          <table class="table table-bordered table-striped text-center">
+            <thead>
+              <tr ><th class="text-center">Opérateur</th><th class="text-center">Signification</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong><code>a == b</code></strong></td><td><code>a</code> est <strong>égal</strong> à <code>b</code></td></tr>
+              <tr><td><strong><code>a > b</code></strong></td><td><code>a</code> est <strong>strictement supérieur</strong> à <code>b</code></td></tr>
+              <tr><td><strong><code>a < b</code></strong></td><td><code>a</code> est <strong>strictement inférieur</strong> à <code>b</code></td></tr>
+              <tr><td><strong><code>a >= b</code></strong></td><td><code>a</code> est <strong>supérieur ou égal</strong> à <code>b</code></td></tr>
+              <tr><td><strong><code>a <= b</code></strong></td><td><code>a</code> est <strong>inférieur ou égal</strong> à <code>b</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <script type="text/javascript" src="5.js"></script>
+      <script>
+      eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('j l(){9 b=a.c(\'o\').m;9 6=a.c(\'k\');n(b==="x"){6.8=\'<3 2="1 1-v" 7="1">\'+\'  <0 e="/0/d-w.i" 2="0-h 5-f">\'+\'  <4 2="g-5">u !</4>\'+\'</3>\'}t{6.8=\'<3 2="1 1-p" 7="1">\'+\'  <0 e="/0/d-q.i" 2="0-h 5-f">\'+\'  <4 2="g-5">r s :(</4>\'+\'</3>\'}}',34,34,'img|alert|class|div|h1|center|resultDiv|role|innerHTML|var|document|password|getElementById|cowboy|src|block|text|thumbnail|gif|function|resultatCoffreFort|ouvrirLeCoffre|value|if|motDePasse|danger|beebop_ed_fail|Code|incorrect|else|Bravo|success|beebop_ed_success|Ed5'.split('|'),0,{}))
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang='fr'>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Challenge 3 - Calculs, variables et chaînes en Javascript</title>
+    <link rel="stylesheet" type="text/css" href="../libs/css/bootstrap-3.3.7.min.css">
+    <link rel="stylesheet" type="text/css" href="../libs/css/codemirror-5.19.0.css">
+    <link rel="stylesheet" type="text/css" href="../challenges.css">
+    <script type="text/javascript" src="../libs/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../libs/js/bootstrap-3.3.7.min.js"></script>
+    <style>
+    .CodeMirror {
+      height: auto;
+      border: solid 1px #90B4FE;
+    }
+    .CodeMirror:last-child::before {
+      content: "Résultat:";
+      font-style: italic;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container" role="main">
+
+      <div class="header clearfix">
+        <h3 class="text-muted">Challenge 3 - Calculs, variables et chaînes en Javascript</h3>
+      </div>
+
+      <div class="jumbotron">
+  	    <img src="../img/cowboy-beebop_ed_talking-to-herself.gif" class="img-thumbnail center-block">
+        <h2>A quoi ça sert Javascript ?</h2>
+        <p>Pour vous faire une idée, tentez l'expérience suivante:
+          installez le plugin <a href="https://chrome.google.com/webstore/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf">ScriptSafe</a> pour Chrome,
+          ou <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/">NoScript</a> pour Firefox,
+          puis visitez le site des <a href="http://www.pagesjaunes.fr">Pages Jaunes</a>.</p>
+      </div>
+
+      <div class="alert alert-info" role="alert">
+        <p>Dans les champs ci-dessous, le code Javascript que tu écriras sera immédiatement évalué, et le résultat de ta dernière ligne sera affiché.</p>
+        <p>Mais tu peux faire la même chose sur <strong>n'importe quelle page</strong> en accédant à <strong><a href="http://www.alsacreations.com/astuce/lire/1436-console-javascript.html">la console Javascript de ton navigateur</a></strong>.</p>
+        <p>Pour la suite de ce challenge, aide-toi de <strong><a target="_blank" href="https://openclassrooms.com/courses/apprenez-a-coder-avec-javascript/1-2-3-codez">ce cours sur OpenClassrooms</a></strong>.</p>
+        <!--br>
+        <p>Voici les opérateurs Javascript à ta disposition:</p>
+        <div class="center-block" style="width: 400px; background: white">
+          <table class="table table-bordered table-striped text-center">
+            <thead>
+              <tr ><th class="text-center">Opérateur</th><th class="text-center">Signification</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong><code>+</code></strong></td><td>Addition</td></tr>
+              <tr><td><strong><code>-</code></strong></td><td>Soustraction</td></tr>
+              <tr><td><strong><code>*</code></strong></td><td>Multiplication</td></tr>
+              <tr><td><strong><code>/</code></strong></td><td>Division</td></tr>
+            </tbody>
+          </table>
+        </div-->
+      </div>
+
+      <div class="well">
+	      <h2>Les nombres</h2>
+        <p>Devine le résultat des calculs ci-dessous, puis vérifie ta réponse par toi-même dans l'interprêteur Javascript ci-dessous.</p>
+        <p><code>1+2+3</code> ?</p>
+        <p><code>0.5 * -3</code> ?</p>
+        <p><code>2+3*4</code> ?</p>
+        <p>Essaie d'ajouter des parenthèses dans ce dernier calcul, pour que l'addition soit effectuée en premier</p>
+        <div class="klipse">
+        </div>
+      </div>
+
+      <div class="well">
+	      <h2>Les variables</h2>
+        <p>Une variable est comme une <strong>étiquette</strong>, ou comme une boîte dans laquelle on range des choses.</p>
+        <p>Pour donner une valeur à une variable, on lui <strong>affecte</strong> une valeur en utilisant l'opérateur<code>=</code>.</p>
+        <p>Devine le résultat des expressions ci-dessous, puis vérifie ta réponse par toi-même dans la console Javascript ci-dessous.</p>
+        <p>(n'oublie pas, seule le résultat de ta dernière ligne sera affiché)</p>
+        <pre><code>x = 2<br>y = x<br>y</code></pre>
+        <pre><code>x = 2<br>y = x + 2<br>y</code></pre>
+        <pre><code>x = 2<br>x = x * 3<br>x</code></pre>
+        <div class="klipse">
+        </div>
+      </div>
+
+      <div class="well">
+	      <h2>Les chaînes de charactères</h2>
+        <p>Une chaîne de caractères (en abrégé chaîne, ou encore string en anglais) représente un texte.</p>
+        <p>Ces valeurs sont délimitées par une paire de guillemets simples ou doubles : <code>"Ceci est une chaîne"</code>.</p>
+        <p>Devine le résultat des expressions ci-dessous, puis vérifie ta réponse par toi-même dans la console Javascript ci-dessous.</p>
+        <pre><code>x = 'BADA'<br>y = 'BOUM'<br>x + y</code></pre>
+        <pre><code>x = 'TO'<br>x + x</code></pre>
+        <pre><code>x = 'X'<br>y = 'Y'<br>x = y<br>x</code></pre>
+        <pre><code>x = '4'<br>y = '5'<br>x + y</code></pre>
+        <div class="klipse">
+        </div>
+      </div>
+
+      <div class="alert alert-warning" role="alert">
+        <strong>Petite astuce :</strong> Alors que tu visites la page web de ton choix, insère <code>document.body.contentEditable='true'</code> dans la <a href="http://www.alsacreations.com/astuce/lire/1436-console-javascript.html">console Javascript de ton navigateur</a>.
+        Tu pourras alors modifier n'importe quel texte de la page !
+      </div>
+
+    </div>
+
+    <script>
+      window.klipse_settings = {selector_eval_js: '.klipse'};
+    </script>
+    <script src="../libs/js/klipse-0.7.0.min.js"></script>
+  </body>
+</html>

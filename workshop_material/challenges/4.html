@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang='fr'>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Challenge 4 - Javascript et le canvas HTML5</title>
+    <link rel="stylesheet" type="text/css" href="../libs/css/bootstrap-3.3.7.min.css">
+    <link rel="stylesheet" type="text/css" href="../libs/css/codemirror-5.19.0.css">
+    <link rel="stylesheet" type="text/css" href="../libs/css/codemirror-5.19.0_theme-monokai.css">
+    <link rel="stylesheet" type="text/css" href="../challenges.css">
+    <script type="text/javascript" src="../libs/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../libs/js/bootstrap-3.3.7.min.js"></script>
+    <script type="text/javascript" src="../libs/js/codemirror-5.19.0.js"></script>
+    <script type="text/javascript" src="../libs/js/codemirror-5.19.0_mode-javascript.js"></script>
+    <style>
+    canvas {
+      background-color: white;
+      border: 1px solid black;
+      margin: 10px;
+    }
+    .CodeMirror {
+      height: auto;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container" role="main">
+
+      <div class="header clearfix">
+        <h3 class="text-muted">Challenge 4 - Javascript et le canvas HTML5</h3>
+      </div>
+
+      <div class="jumbotron">
+  	    <img src="../img/cowboy-beebop_ed_dodging-dog.gif" class="img-thumbnail center-block">
+      </div>
+
+      <div class="alert alert-info" role="alert">
+        <p>Dans ce challenge, tu peux utiliser les fonctions Javascript suivantes:</p>
+        <br>
+        <ul>
+          <li><code>c.strokeStyle = "couleur";</code> : définit une <a href="http://htmlcolorcodes.com/fr/noms-de-couleur/">couleur</a> à utiliser pour les bords des éléments suivants.</li>
+          <li><code>c.strokeRect(positionX, positionY, largeur, hauteur)</code> : dessine un rectancle vide</li>
+          <li><code>c.strokeCircle(positionX, positionY, rayon)</code> : dessine un cercle vide</li>
+        <ul>
+        <br>
+        </ul>
+          <li><code>c.fillStyle = "couleur";</code> : définit une <a href="http://htmlcolorcodes.com/fr/noms-de-couleur/">couleur</a> à utiliser pour le remplissage des éléments suivants.</li>
+          <li><code>c.fillRect(positionX, positionY, largeur, hauteur)</code> : dessine un rectancle coloré</li>
+          <li><code>c.fillCircle(positionX, positionY, rayon)</code> : dessine un cercle coloré</li>
+        </ul>
+      </div>
+
+      <div class="well">
+        <h2>Dessins géométriques</h2>
+        <p>Modifie le code Javascript ci-dessous pour accomplir et cocher les défis suivants:</p>
+        <ul>
+          <li><input type="checkbox"> tout d'abord, joue avec les nombres ci-dessous pour essayer de transformer les rectangles en <strong>carrés</strong></li>
+          <li><input type="checkbox"> place le cercle <strong>au centre</strong>, le carré noir <strong>en bas à gauche</strong> et le carré filiforme <strong>en bas à droite</strong></li>
+          <li><input type="checkbox"> rend les carrés <strong>bleus</strong>, puis essaie <a href="http://htmlcolorcodes.com/fr/noms-de-couleur/">d'autres couleurs</a></li>
+          <li><input type="checkbox"> ajoute un cercle, rempli en vert</a></li>
+        </ul>
+        <div class="code-mirror" data-canvas-id="c1">
+c1.strokeStyle = "black";
+c1.fillRect(20, 20, 50, 75);
+c1.strokeStyle = "black";
+c1.strokeRect(100, 100, 60, 80);
+c1.strokeCircle(150, 150, 80);
+        </div>
+        <canvas width="400" height="400" id="c1" class="center-block"></canvas>
+      </div>
+
+      <div class="alert alert-warning" role="alert">
+        <strong>Si quelque chose ne fonctionne pas :</strong> Ouvre la <a href="http://www.alsacreations.com/astuce/lire/1436-console-javascript.html">console Javascript de ton navigateur</a> pour voir les messages d'erreur.
+      </div>
+
+      <div class="well">
+        <img src="../img/boucle_for.jpg" class="img-thumbnail" style="width: 30%; float: right">
+        <h2>Boucles</h2>
+        <p>Voici un nouveau concept très puissant en programmation !</p>
+        <p>La <strong>boucle<code>for</code></strong> permet de répéter des instructions.</p>
+        <p>Modifie le code ci-dessous pour:</p>
+        <ul>
+          <li><input type="checkbox">aligner tous les carrés sur une ligne</li>
+          <li><input type="checkbox">afficher seulement 3 carrés</li>
+          <li><input type="checkbox">espacer les carrés pour qu'ils ne se superposent plus</li>
+          <li><input type="checkbox">grossir la taille des carrés</li>
+          <li><input type="checkbox">remplacer les carrés par des cercles</li>
+        </ul>
+        <p><strong>Attention !</strong> Pour dessiner dans ce nouveau canvas, débute tes commandes par <code>c2</code> au lieu de <code>c1</code>.</p>
+        <div class="code-mirror" data-canvas-id="c2">
+for (i = 0; i < 10; i = i + 1) {
+  decalage = 20 * i;
+  c2.strokeRect(100 + decalage, 100 + decalage, 50, 50);
+}
+        </div>
+        <canvas width="600" height="600" id="c2" class="center-block"></canvas>
+      </div>
+
+      <div class="well">
+        <h2>En piste l'artiste !</h2>
+        <p>Pour finir, essaie de dessiner un visage !</p>
+        <p>Cette fois, écris le code dans le fichier <strong>4.js</strong>, et débute tes commandes avec <code>c3</code>, pour utiliser le canvas ci-dessous.</p>
+        <canvas width="600" height="600" id="c3" class="center-block"></canvas>
+        <script>
+        c3 = document.getElementById('c3').getContext('2d');
+        </script>
+      </div>
+
+      <div class="alert alert-info" role="alert">
+        <p>Si tu veux, tu peux aussi tracer des lignes:</p>
+        <ul>
+          <li>commence par définir une couleur de ligne avec <code>c.strokeStyle =</code></li>
+          <li>débute le tracé de ta ligne par <code>c.beginPath()</code> puis définit ton point de départ avec <code>c.moveTo(positionX, positionY);</code></li>
+          <li>rajoute des points avec avec <code>c.lineTo(positionX, positionY);</code></li>
+          <li>enfin, conclu ton tracé par <code>c.stroke());</code></li>
+        </ul>
+        <p>Par exemple:</p>
+        <pre><code>c1.beginPath();
+c1.moveTo(150, 100);
+c1.lineTo(200, 200);
+c1.lineTo(100, 200);
+c1.lineTo(150, 100);
+c1.stroke();</pre></code>
+      </div>
+
+    </div>
+
+    <script>
+    CanvasRenderingContext2D.prototype.fillCircle = function (x, y, radius) {
+      this.beginPath();
+      this.arc(x, y, radius, 0, Math.PI*2);
+      this.fill();
+      this.closePath();
+    }
+    CanvasRenderingContext2D.prototype.strokeCircle = function (x, y, radius) {
+      this.beginPath();
+      this.arc(x, y, radius, 0, Math.PI*2);
+      this.stroke();
+      this.closePath();
+    }
+    </script>
+    <script type="text/javascript" src="../code-mirror-repl.js"></script>
+    <script type="text/javascript" src="4.js"></script>
+  </body>
+</html>
