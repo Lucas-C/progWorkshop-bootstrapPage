@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang='fr'>
+<html lang="fr">
   <head>
-    <meta charset='UTF-8'>
+    <meta charset="UTF-8">
     <title>Challenge 3 - Calculs, variables et chaînes en Javascript</title>
     <link rel="stylesheet" type="text/css" href="../libs/css/bootstrap-3.3.7.min.css">
     <link rel="stylesheet" type="text/css" href="../libs/css/codemirror-5.19.0.css">
@@ -9,8 +9,18 @@
     <script type="text/javascript" src="../libs/js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="../libs/js/bootstrap-3.3.7.min.js"></script>
     <style>
+    .content-with-nav-tabs {
+      background-color: #fff;
+      border-style: solid;
+      border-color: #ddd;
+      border-width: 1px;
+      border-radius: 4px 4px 0 0;
+      box-shadow: none;
+      margin: 0 -15px 15px;
+      padding: 15px;
+    }
     .CodeMirror {
-      height: auto;
+      height: 8rem;
       border: solid 1px #90B4FE;
     }
     .CodeMirror:last-child::before {
@@ -27,18 +37,55 @@
       </div>
 
       <div class="jumbotron">
-  	    <img src="../img/cowboy-beebop_ed_talking-to-herself.gif" class="img-thumbnail center-block">
+          <img src="../img/cowboy-beebop_ed_talking-to-herself.gif" alt="Ed from CowboyBeebop talking to himself while in cyberspace" class="img-thumbnail center-block">
         <h2>A quoi ça sert Javascript ?</h2>
-        <p>Pour vous faire une idée, tentez l'expérience suivante:
-          installez le plugin <a href="https://chrome.google.com/webstore/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf">ScriptSafe</a> pour Chrome,
-          ou <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/">NoScript</a> pour Firefox,
-          puis visitez le site des <a href="http://www.pagesjaunes.fr">Pages Jaunes</a>.</p>
+        <p>A partir de maintenant, tu vas découvrir les bases du language de programmation <strong>Javascript</strong>.</p>
+        <p>Pour comprendre le rôle de ce language sur Internet, je te propose l'expérience suivante:</p>
+        <div class="content-with-nav-tabs">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#firefox" aria-controls="firefox" role="tab" data-toggle="tab">Clique ici si tu utilise Firefox</a></li>
+            <li role="presentation"><a href="#chrome" aria-controls="chrome" role="tab" data-toggle="tab">Clique ici si tu utilise Chrome</a></li>
+          </ul>
+          <div class="tab-content" style="padding: 15px">
+            <div role="tabpanel" class="tab-pane active" id="firefox">
+              <ul>
+                <li>installe le plugin <strong>NoScript</strong> qui <strong>désactive le code Javascript sur toutes les pages web que tu visites</strong>:
+                    rends-toi sur <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" target="_blank">ce lien</a>,
+                    puis clique sur le bouton "+ Ajouter à Firefox"
+                    et dans la petit fenêtre qui s'ouvre, clique sur "Installer".
+                    Redémarre enfin Firefox.</li>
+                <li>rend toi sur le site <a href="http://www.pagesjaunes.fr" target="_blank">www.pagesjaunes.fr</a> avec ton navigateur.
+                    Descend bien jusqu'en bas de la page pour observer tout son contenu.</li>
+                <li>désinstalle le plugin <strong>NoScript</strong>:
+                    dans Firefox, clique sur l'icône "Menu" puis sur "Extensions" ("Add-ons" en anglais).
+                    Ensuite, clique sur "Désactiver" ("Disable" en anglais) pour l'extension NoScript.
+                    Si une fenêtre s'ouvre, clique "Oui".
+                    Redémarre enfin Firefox.</li>
+                <li>retourne sur le site <a href="http://www.pagesjaunes.fr" target="_blank">www.pagesjaunes.fr</a> avec ton navigateur.
+                    Qu'observes-tu cette fois?</li>
+              </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="chrome">
+              <ul>
+                  <li>installe le plugin <strong>ScriptSafe</strong> qui <strong>désactive le code Javascript sur toutes les pages web que tu visites</strong>:
+                      rends-toi sur <a href="https://chrome.google.com/webstore/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf" target="_blank">ce lien</a>,
+                  puis clique sur le bouton "+ Ajouter à Chrome",
+                  et dans la petit fenêtre qui s'ouvre, clique sur "Installer".</li>
+                  <li>rend toi sur le site <a href="http://www.pagesjaunes.fr" target="_blank">www.pagesjaunes.fr</a> avec ton navigateur
+                      Descend bien jusqu'en bas de la page pour observer tout son contenu.</li>
+                  <li>désinstalle le plugin <strong>ScriptSafe</strong>:
+                      dans Chrome, clique sur l'icône "Menu" puis "Plus d'outils" puis "Extensions".
+                      Ensuite, décoche la case "Activé" pour l'extension ScriptSafe.</li>
+                  <li>retourne sur le site <a href="http://www.pagesjaunes.fr" target="_blank">www.pagesjaunes.fr</a> avec ton navigateur.
+                      Qu'observes-tu cette fois?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="alert alert-info" role="alert">
         <p>Dans les champs ci-dessous, le code Javascript que tu écriras sera immédiatement évalué, et le résultat de ta dernière ligne sera affiché.</p>
-        <p>Mais tu peux faire la même chose sur <strong>n'importe quelle page</strong> en accédant à <strong><a href="http://www.alsacreations.com/astuce/lire/1436-console-javascript.html">la console Javascript de ton navigateur</a></strong>.</p>
-        <p>Pour la suite de ce challenge, aide-toi de <strong><a target="_blank" href="https://openclassrooms.com/courses/apprenez-a-coder-avec-javascript/1-2-3-codez">ce cours sur OpenClassrooms</a></strong>.</p>
         <!--br>
         <p>Voici les opérateurs Javascript à ta disposition:</p>
         <div class="center-block" style="width: 400px; background: white">
@@ -56,32 +103,41 @@
         </div-->
       </div>
 
-      <div class="well">
-	      <h2>Les nombres</h2>
+      <div class="well" data-klipse-callback="triggerNumberAnimation">
+          <h2>Les nombres</h2>
         <p>Devine le résultat des calculs ci-dessous, puis vérifie ta réponse par toi-même dans l'interprêteur Javascript ci-dessous.</p>
         <p><code>1+2+3</code> ?</p>
         <p><code>0.5 * -3</code> ?</p>
         <p><code>2+3*4</code> ?</p>
         <p>Essaie d'ajouter des parenthèses dans ce dernier calcul, pour que l'addition soit effectuée en premier</p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 3rem;">
+            0
+          </div>
+        </div>
         <div class="klipse">
         </div>
       </div>
 
-      <div class="well">
-	      <h2>Les variables</h2>
+      <div class="well" data-klipse-callback="triggerNumberAnimation">
+          <h2>Les variables</h2>
         <p>Une variable est comme une <strong>étiquette</strong>, ou comme une boîte dans laquelle on range des choses.</p>
         <p>Pour donner une valeur à une variable, on lui <strong>affecte</strong> une valeur en utilisant l'opérateur<code>=</code>.</p>
-        <p>Devine le résultat des expressions ci-dessous, puis vérifie ta réponse par toi-même dans la console Javascript ci-dessous.</p>
-        <p>(n'oublie pas, seule le résultat de ta dernière ligne sera affiché)</p>
+        <p>Devine le résultat des expressions ci-dessous, puis vérifie ta réponse par toi-même dans la console Javascript en-dessous.</p>
+        <p>(n'oublie pas, seul le résultat de ta dernière ligne sera affiché)</p>
         <pre><code>x = 2<br>y = x<br>y</code></pre>
         <pre><code>x = 2<br>y = x + 2<br>y</code></pre>
         <pre><code>x = 2<br>x = x * 3<br>x</code></pre>
-        <div class="klipse">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 3rem;">
+            0
+          </div>
         </div>
+        <div class="klipse"></div>
       </div>
 
-      <div class="well">
-	      <h2>Les chaînes de charactères</h2>
+      <div class="well" data-klipse-callback="triggerTextAnimation">
+          <h2>Les chaînes de charactères</h2>
         <p>Une chaîne de caractères (en abrégé chaîne, ou encore string en anglais) représente un texte.</p>
         <p>Ces valeurs sont délimitées par une paire de guillemets simples ou doubles : <code>"Ceci est une chaîne"</code>.</p>
         <p>Devine le résultat des expressions ci-dessous, puis vérifie ta réponse par toi-même dans la console Javascript ci-dessous.</p>
@@ -89,13 +145,24 @@
         <pre><code>x = 'TO'<br>x + x</code></pre>
         <pre><code>x = 'X'<br>y = 'Y'<br>x = y<br>x</code></pre>
         <pre><code>x = '4'<br>y = '5'<br>x + y</code></pre>
-        <div class="klipse">
-        </div>
+        <button class="btn btn-primary center-block" type="button" style="margin-bottom: 10px">...</button>
+        <div class="klipse"></div>
       </div>
 
       <div class="alert alert-warning" role="alert">
-        <strong>Petite astuce :</strong> Alors que tu visites la page web de ton choix, insère <code>document.body.contentEditable='true'</code> dans la <a href="http://www.alsacreations.com/astuce/lire/1436-console-javascript.html">console Javascript de ton navigateur</a>.
-        Tu pourras alors modifier n'importe quel texte de la page !
+        <strong>Petite astuce :</strong> Sais-tu que tu peux modifier n'importe quelle page web très simplement ?
+        Voici comment procéder:
+        <ul>
+            <li>rends-toi sur une page web de ton choix dans un nouvel onglet.</li>
+            <li>ouvre la <strong>console Javascript</strong> de ton navigateur en appuyant sur <strong>F12</strong> si tu utilises Firefox, ou bien si tu utilises Chrome simultanément sur <strong>Ctrl+Shift+J</strong> dans l'ordre.</li>
+            <li>insère <code>document.body.contentEditable='true'</code> dans la barre de saisie en bas.
+                Ne t'inquiète pas si ton navigateur affiche un avertissement la 1ère fois que tu copies-colles dans cette zone:
+                tapes simplement ce qu'il te demande dans ce cas.</li>
+            <li>sélectionne n'importe quel texte de la page avec ta souris.</li>
+            <li>tape n'importe quoi d'autre au clavier pour le remplacer.</li>
+        </ul>
+        Et voilà !
+        Bien sûr, ces changements n'affecte que la page dans ton navigateur. Dès que tu changeras de page, ces modifications seront perdues.
       </div>
 
     </div>
@@ -104,5 +171,42 @@
       window.klipse_settings = {selector_eval_js: '.klipse'};
     </script>
     <script src="../libs/js/klipse-0.7.0.min.js"></script>
+    <script>
+      window.triggerNumberAnimation = function (nbr) {
+        var progressBar = this.getElementsByClassName('progress-bar')[0];
+        if (Number.isInteger(+nbr)) {
+          setProgressBar(progressBar, nbr);
+        } else {
+          setProgressBar(progressBar, 0);
+        }
+      }
+      window.triggerTextAnimation = function (text) {
+        var button = this.getElementsByTagName('button')[0];
+        if (text.indexOf('Error') !== -1) {
+          setMsgBoxContent(button, '...');
+        } else {
+          setMsgBoxContent(button, text);
+        }
+      }
+      function setProgressBar(progressBar, value) {
+        progressBar.setAttribute('aria-valuenow', value);
+        progressBar.style.width = value + '%';
+        progressBar.textContent = value;
+      }
+      function setMsgBoxContent(button, value) {
+        button.textContent = value;
+      }
+      document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('*[data-klipse-callback]').forEach(function (klipseParent) {
+          var klipseCallback = window[klipseParent.dataset.klipseCallback];
+          klipseParent.querySelectorAll('.CodeMirror:last-child .CodeMirror-code').forEach(function (result) {
+            var observer = new MutationObserver(function(mutations, observer) {
+              klipseCallback.bind(klipseParent)(result.textContent);
+            });
+            observer.observe(result, {childList: true});
+          });
+        });
+      });
+    </script>
   </body>
 </html>

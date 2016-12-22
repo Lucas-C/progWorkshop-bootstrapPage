@@ -1,12 +1,14 @@
+/codemaven
+
 /slides/Gruntfile.js
 /slides/LICENSE
 /slides/README.md
 /slides/bower.json
-/slides/index.html
 /slides/index.js
 /slides/package.json
 /slides/css/
 /slides/js/
 /slides/lib/
 /slides/plugin/
+
 /workshop_material/installers/

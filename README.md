@@ -1,10 +1,8 @@
 # ToDo
 
-- RevealJS load Markdown without HTTP server
+- tester backup-and-open-intro.bat
 
-	  <script type="text/markdown" id="markdown-src" src="index.md"></script>
-
-# Bilan de la séance
+# Bilan de la séance râtée
 
 - damn antivirus !!
 - pas testé au préalable
@@ -20,23 +18,38 @@
 
 - Qui suis-je ?
 - Et vous ? Vous connaissez quoi ?
-- Ce qu'on va faire : il y aura des PAUSES communes
+- Ce qu'on va faire :
+    * 4 petits challenges: vous ne pourrez pas tous les faire en 2h
+    * combien de temps: ~2h
+    * il y aura des PAUSES communes
 - ATTENTION: ceci n'est pas un cours, mais un jeu ! Parfois je donnerais des explications, mais vous n'aurez pas besoin de tout savoir sur la programmation pour terminer les challenges.
 
 ## Présentation des outils
 
-**Q:** Navigateur web, késako ?
+1- Explorateur Windows
+
+2- Atom
+Présentation de Atom : outil de pro. Conseil: CTRL+S
+Gros avantage : la coloration syntaxique.
+Fermer tous les onglets.
+Expliquer l'intérêt de l'outil
+
+3- Navigateur web, késako ?
 Conseil: F5
 Console de développeur: CTRL+MAJ+I avec Chrome, CTRL+MAJ+K avec Firefox
 
-Présentation de Atom : outil de pro. Conseil: CTRL+S
-Gros avantage : la coloration syntaxique.
-Fermer le panneau de droite.
+Tout est écrit, je vous laisse découvrir par vous même la page.
+Essayer de trouver la solution avant de cliquer sur les indices !
+Et n'hésitez pas si vous avez des questions. Il n'y a pas de question stupide !
+
+Vous pouvez fouiller partout dans l'explorateur windows, ou ouvrir tous les fichiers que vous voulez dans Atom.
+
+URL ? késako ?
 
 **Q:** Exemples d'extensions de fichier ?
 ... -> `.bat` = "Batch", vieux language de script pour Windows
 
-	  run-server.bat
+      run-server.bat
 
 -> fenêtre demande authorisation: OK
 
@@ -54,8 +67,13 @@ En effet, toute la navigation web repose sur l'échange de fichiers ! Le plus so
 
 **Fin du challenge:** présenter rapidement le rôle les balises HTML, et les attributs
 
+Expliquer qu'on peut revenir en arrière dans Atom avec CTRL+Z
+Expliquer aussi CTRL+S
+
 
 ## Challenge 2
+
+Si "anatomy-of-an-html-tag.png" est légèrement tronqué sur les côtés, appuyer sur ALT.
 
 (Quels formats d'images connaissez vous ? Quels formats permettent des images transparentes ?)
 
@@ -71,25 +89,17 @@ Canvas & 1ère boucle "for"
 
 Formulaire, boucle, fonctions & conditionnelles
 
+## Cool stuff to show off
+
+- `document.body.contentEditable='true';`
+- `alert("Salut !")`
+- https://archive.org/web/
+
 
 # Secrets
 
 ## Challenge 5 - ouvrirLeCoffre
 
-Fonction obscurcie :
+    npm install -g js-obfuscator
+    jsobfuscate < secret_obfuscated_function.js
 
-		function ouvrirLeCoffre () {
-		  var password = document.getElementById('motDePasse').value;
-		  var resultDiv = document.getElementById('resultatCoffreFort');
-		  if (password === "ed5") {
-		    resultDiv.innerHTML = '<div class="alert alert-success" role="alert">'
-		      + '  <img src="/img/cowboy-beebop_ed_success.gif" class="img-thumbnail center-block">'
-		      + '  <h1 class="text-center">Bravo !</h1>'
-		      + '</div>';
-		  } else {
-		    resultDiv.innerHTML = '<div class="alert alert-danger" role="alert">'
-		      + '  <img src="/img/cowboy-beebop_ed_fail.gif" class="img-thumbnail center-block">'
-		      + '  <h1 class="text-center">Code incorrect :(</h1>'
-		      + '</div>';
-		  }
-		}
