@@ -1,6 +1,5 @@
-# ToDo
+Online demo : http://lucas-c.github.io/progWorkshop-bootstrapPage/workshop_material
 
-- tester backup-and-open-intro.bat
 
 # Bilan de la séance râtée
 
