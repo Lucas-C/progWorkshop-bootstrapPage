@@ -100,6 +100,8 @@ Formulaire, boucle, fonctions & conditionnelles
 
 ## Challenge 5 - ouvrirLeCoffre
 
+Comment faire pour éviter de continuer les boucles une fois le mdp trouvé ? -> `break`
+
     npm install -g js-obfuscator
     jsobfuscate < secret_obfuscated_function.js
 

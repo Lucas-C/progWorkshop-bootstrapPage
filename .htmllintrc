@@ -1,0 +1,11 @@
+{
+    // names of npm modules to load into htmllint
+    "plugins": [],
+
+    "attr-bans": ["align", "background", "bgcolor", "border", "frameborder", "longdesc", "marginwidth", "marginheight", "scrolling"],
+    "attr-name-style": "dash",
+    "attr-req-value": false,
+    "id-class-style": false,
+    "indent-width": 2,
+    "tag-bans": ["b", "i"]
+}

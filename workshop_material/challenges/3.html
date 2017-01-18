@@ -23,10 +23,6 @@
       height: 8rem;
       border: solid 1px #90B4FE;
     }
-    .CodeMirror:last-child::before {
-      content: "Résultat:";
-      font-style: italic;
-    }
     </style>
   </head>
   <body>
@@ -170,7 +166,7 @@
     <script>
       window.klipse_settings = {selector_eval_js: '.klipse'};
     </script>
-    <script src="../libs/js/klipse-0.7.0.min.js"></script>
+    <script src="../libs/js/klipse_plugin-6.1.0.min.js"></script>
     <script>
       window.triggerNumberAnimation = function (nbr) {
         var progressBar = this.getElementsByClassName('progress-bar')[0];
@@ -197,9 +193,9 @@
         button.textContent = value;
       }
       document.addEventListener("DOMContentLoaded", function() {
-        document.querySelectorAll('*[data-klipse-callback]').forEach(function (klipseParent) {
+        Array.prototype.forEach.call(document.querySelectorAll('*[data-klipse-callback]'), function (klipseParent) {
           var klipseCallback = window[klipseParent.dataset.klipseCallback];
-          klipseParent.querySelectorAll('.CodeMirror:last-child .CodeMirror-code').forEach(function (result) {
+          Array.prototype.forEach.call(klipseParent.querySelectorAll('.CodeMirror:last-child .CodeMirror-code'), function (result) {
             var observer = new MutationObserver(function(mutations, observer) {
               klipseCallback.bind(klipseParent)(result.textContent);
             });
