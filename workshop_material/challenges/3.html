@@ -23,6 +23,10 @@
       height: 8rem;
       border: solid 1px #90B4FE;
     }
+    .CodeMirror:last-child::before {
+      content: "Résultat:";
+      font-style: italic;
+    }
     </style>
   </head>
   <body>
@@ -111,7 +115,7 @@
             0
           </div>
         </div>
-        <div class="klipse" data-async-code="true">
+        <div class="klipse">
         </div>
       </div>
 
@@ -129,7 +133,7 @@
             0
           </div>
         </div>
-        <div class="klipse" data-async-code="true"></div>
+        <div class="klipse"></div>
       </div>
 
       <div class="well" data-klipse-callback="triggerTextAnimation">
@@ -142,7 +146,7 @@
         <pre><code>x = 'X'<br>y = 'Y'<br>x = y<br>x</code></pre>
         <pre><code>x = '4'<br>y = '5'<br>x + y</code></pre>
         <button class="btn btn-primary center-block" type="button" style="margin-bottom: 10px">...</button>
-        <div class="klipse" data-async-code="true"></div>
+        <div class="klipse"></div>
       </div>
 
       <div class="alert alert-warning" role="alert">
@@ -166,7 +170,7 @@
     <script>
       window.klipse_settings = {selector_eval_js: '.klipse'};
     </script>
-    <script src="../libs/js/klipse_plugin-6.1.0.min.js"></script>
+    <script src="../libs/js/klipse-0.7.0.min.js"></script>
     <script>
       window.triggerNumberAnimation = function (nbr) {
         var progressBar = this.getElementsByClassName('progress-bar')[0];
