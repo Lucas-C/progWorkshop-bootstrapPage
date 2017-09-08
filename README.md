@@ -1,3 +1,7 @@
+<!--TODO:
+- section "Aller plus loin" avec https://thimble.mozilla.org par exemple
+-->
+
 Online demo : http://lucas-c.github.io/progWorkshop-bootstrapPage/workshop_material
 
 
